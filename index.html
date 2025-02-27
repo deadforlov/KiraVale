@@ -6,7 +6,7 @@
     <title>KiraVale</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif; /* Новый стильный шрифт */
+            font-family: 'Poppins', sans-serif; /* Шрифт в стиле TikTok */
             background: linear-gradient(135deg, #000 40%, #ee1d52 60%, #69c9d0);
             color: white;
             margin: 0;
@@ -20,26 +20,24 @@
 
         .container {
             padding: 40px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
             width: 80%;
             max-width: 700px;
-            border: 2px solid #fff;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
         }
 
         .step {
             margin-bottom: 30px;
-            padding: 25px;
+            padding: 20px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
         }
 
         .step-title {
-            font-size: 30px;
-            font-weight: 600;
+            font-size: 28px;
+            font-weight: 700;
             color: #ff2d55;
         }
 
@@ -54,26 +52,21 @@
             color: #ff2d55;
         }
 
-        /* Длинная стрелка */
+        /* Стрелка у правого верхнего угла */
         .arrow {
-            display: inline-block;
-            margin-top: 20px;
-            width: 0;
-            height: 0;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-bottom: 40px solid #fff;
             position: absolute;
             top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: pulse 1.5s infinite;
+            right: 5%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #fff;
         }
 
-        /* Пульсирующая кнопка */
         #openBrowser {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 30px;
             padding: 15px 40px;
             font-size: 18px;
             font-weight: bold;
@@ -86,13 +79,6 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
         }
 
         #openBrowser:hover {
@@ -121,7 +107,6 @@
                 font-size: 16px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -129,13 +114,13 @@
         <div class="step">
             <p class="step-title">Step 1:</p>
             <p class="step-description">Click on the colon<br><span class="highlight">Select "Open in browser"</span></p>
-            <div class="arrow"></div>
         </div>
         <div class="step">
             <p class="step-title">Step 2:</p>
-            <p class="step-description">Click on the button below:</p>
+            <p class="step-description">Click the button below to proceed:</p>
         </div>
         <button id="openBrowser" onclick="window.location.href='https://swipe.vg/p/kiravale'">Let's Go!</button>
+        <div class="arrow"></div>
     </div>
 </body>
 </html>
