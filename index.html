@@ -104,6 +104,20 @@
             animation: bounce 1s infinite;
         }
 
+        /* Стрелка указывающая на кнопку */
+        .arrow-button {
+            position: absolute;
+            top: 70%; /* Разместим ниже */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid #fff;
+            animation: bounce 1s infinite;
+        }
+
         @keyframes bounce {
             0% { transform: translateY(0); }
             50% { transform: translateY(10px); }
@@ -140,7 +154,8 @@
             <p class="step-description">Click the button below to proceed:</p>
         </div>
         <button id="openBrowser" onclick="window.location.href='https://swipe.vg/p/kiravale'">Let's Go!</button>
-        <div class="arrow"></div>
+        <div class="arrow"></div> <!-- Стрелка, указывающая на "Step 1" -->
+        <div class="arrow-button"></div> <!-- Стрелка, указывающая на кнопку -->
     </div>
 </body>
 </html>
