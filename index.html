@@ -25,6 +25,7 @@
             width: 80%;
             max-width: 650px;
             text-align: center;
+            position: relative;
         }
 
         /* Заголовки */
@@ -104,24 +105,25 @@
             animation: bounce 1s infinite;
         }
 
-        /* Стрелка указывающая на кнопку */
+        /* Улучшенная стрелка, указывающая на кнопку */
         .arrow-button {
             position: absolute;
-            top: 70%; /* Разместим ниже */
+            top: 70%; /* Позиция, чуть выше кнопки */
             left: 50%;
             transform: translateX(-50%);
             width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-top: 20px solid #fff;
-            animation: bounce 1s infinite;
+            border-top: 25px solid #fff;
+            animation: bounce-arrow 1s infinite;
         }
 
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(10px); }
-            100% { transform: translateY(0); }
+        /* Анимация для стрелки у кнопки */
+        @keyframes bounce-arrow {
+            0% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(10px) rotate(10deg); }
+            100% { transform: translateY(0) rotate(0); }
         }
 
         /* Адаптивность */
