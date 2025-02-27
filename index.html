@@ -6,7 +6,7 @@
     <title>KiraVale</title>
     <style>
         body {
-            font-family: 'Montserrat', sans-serif; /* Стильный шрифт */
+            font-family: 'Poppins', sans-serif; /* Новый стильный шрифт */
             background: linear-gradient(135deg, #000 40%, #ee1d52 60%, #69c9d0);
             color: white;
             margin: 0;
@@ -19,7 +19,7 @@
         }
 
         .container {
-            padding: 30px;
+            padding: 40px;
             background-color: rgba(0, 0, 0, 0.8);
             border-radius: 15px;
             width: 80%;
@@ -31,15 +31,15 @@
 
         .step {
             margin-bottom: 30px;
-            padding: 20px;
+            padding: 25px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             border: 2px solid rgba(255, 255, 255, 0.5);
         }
 
         .step-title {
-            font-size: 28px;
-            font-weight: 700;
+            font-size: 30px;
+            font-weight: 600;
             color: #ff2d55;
         }
 
@@ -68,11 +68,7 @@
             animation: bounce 1s infinite alternate;
         }
 
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(20px); }
-        }
-
+        /* Пульсирующая кнопка */
         #openBrowser {
             display: inline-block;
             margin-top: 20px;
@@ -88,12 +84,18 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         #openBrowser:hover {
             background-color: #f0f0f0;
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
         }
 
         #openBrowser:active {
