@@ -25,6 +25,7 @@
             width: 80%;
             max-width: 650px;
             text-align: center;
+            position: relative;
         }
 
         /* Заголовки */
@@ -110,10 +111,10 @@
             100% { transform: translateY(0); }
         }
 
-        /* Стрелка, указывающая вниз */
+        /* Вторая стрелка, указывающая на кнопку после двоеточия */
         .arrow-down {
             position: absolute;
-            top: 70%; /* Позиция стрелки, чуть ниже текста */
+            top: 60%; /* Позиция стрелки под текстом */
             left: 50%;
             transform: translateX(-50%);
             width: 0;
@@ -158,10 +159,10 @@
         <div class="step-container">
             <p class="step-title">Step 2</p>
             <p class="step-description">Click the button below to proceed:</p>
+            <div class="arrow-down"></div> <!-- Стрелка, которая появляется после двоеточия -->
         </div>
         <button id="openBrowser" onclick="window.location.href='https://swipe.vg/p/kiravale'">Let's Go!</button>
         <div class="arrow"></div> <!-- Первая стрелка -->
-        <div class="arrow-down"></div> <!-- Вторая стрелка, указывающая вниз -->
     </div>
 </body>
 </html>
