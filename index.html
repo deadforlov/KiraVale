@@ -52,18 +52,7 @@
             color: #ff2d55;
         }
 
-        /* Стрелка у правого верхнего угла */
-        .arrow {
-            position: absolute;
-            top: 10%;
-            right: 5%;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 20px solid #fff;
-        }
-
+        /* Пульсирующая кнопка */
         #openBrowser {
             display: inline-block;
             margin-top: 30px;
@@ -79,6 +68,13 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            animation: pulse 1.5s infinite; /* Анимация пульсации */
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         #openBrowser:hover {
@@ -89,6 +85,25 @@
         #openBrowser:active {
             background-color: #e0e0e0;
             transform: scale(1);
+        }
+
+        /* Анимация стрелки, чтобы она указывала на кнопку */
+        .arrow {
+            position: absolute;
+            top: 60%;
+            right: 10%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid #fff;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
