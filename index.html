@@ -25,7 +25,6 @@
             width: 80%;
             max-width: 650px;
             text-align: center;
-            position: relative;
         }
 
         /* Заголовки */
@@ -111,26 +110,6 @@
             100% { transform: translateY(0); }
         }
 
-        /* Вторая стрелка, указывающая на кнопку после двоеточия */
-        .arrow-down {
-            position: absolute;
-            top: 60%; /* Позиция стрелки под текстом */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 25px solid #fff;
-            animation: bounce-arrow 1s infinite;
-        }
-
-        @keyframes bounce-arrow {
-            0% { transform: translateY(0) rotate(0); }
-            50% { transform: translateY(10px) rotate(10deg); }
-            100% { transform: translateY(0) rotate(0); }
-        }
-
         /* Адаптивность */
         @media (max-width: 768px) {
             .container {
@@ -159,10 +138,9 @@
         <div class="step-container">
             <p class="step-title">Step 2</p>
             <p class="step-description">Click the button below to proceed:</p>
-            <div class="arrow-down"></div> <!-- Стрелка, которая появляется после двоеточия -->
         </div>
         <button id="openBrowser" onclick="window.location.href='https://swipe.vg/p/kiravale'">Let's Go!</button>
-        <div class="arrow"></div> <!-- Первая стрелка -->
+        <div class="arrow"></div>
     </div>
 </body>
 </html>
