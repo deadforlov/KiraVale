@@ -5,74 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KiraVale</title>
     <style>
+        /* Общие стили */
         body {
-            font-family: 'Poppins', sans-serif; /* Шрифт в стиле TikTok */
-            background: linear-gradient(135deg, #000 40%, #ee1d52 60%, #69c9d0);
+            font-family: 'Poppins', sans-serif;
+            background: #000; /* Чёрный фон */
             color: white;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            text-align: center;
             overflow: hidden;
         }
 
         .container {
             padding: 40px;
-            background-color: rgba(0, 0, 0, 0.7); /* Темный фон без рамок */
-            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 25px;
             width: 80%;
-            max-width: 700px;
-            box-sizing: border-box;
+            max-width: 650px;
+            text-align: center;
         }
 
-        .step {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1); /* Фон без рамок */
-            border-radius: 10px;
-        }
-
+        /* Заголовки */
         .step-title {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             color: #ff2d55;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
+        /* Описание шагов */
         .step-description {
             font-size: 18px;
-            color: #ffffff;
+            color: #fff;
             margin: 10px 0;
+            line-height: 1.5;
         }
 
         .highlight {
-            font-weight: bold;
             color: #ff2d55;
+            font-weight: bold;
         }
 
-        /* Пульсирующая кнопка */
+        /* Кнопка */
         #openBrowser {
             display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
+            padding: 20px 50px;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 600;
             color: #000;
             background-color: #fff;
             border: none;
-            border-radius: 30px;
+            border-radius: 50px;
             text-transform: uppercase;
-            text-decoration: none;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            animation: pulse 1.5s infinite; /* Анимация пульсации */
+            animation: pulse 1.5s infinite; /* Пульсация кнопки */
         }
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
@@ -86,17 +82,17 @@
             transform: scale(1);
         }
 
-        /* Анимация стрелки, чтобы она указывала на кнопку */
+        /* Стрелка анимация */
         .arrow {
             position: absolute;
-            top: 10%; /* Стрелка теперь будет в правом верхнем углу */
+            top: 10%;
             right: 10%;
             width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-bottom: 20px solid #fff;
-            animation: bounce 1s infinite; /* Плавное движение стрелки */
+            animation: bounce 1s infinite;
         }
 
         @keyframes bounce {
@@ -105,19 +101,20 @@
             100% { transform: translateY(0); }
         }
 
+        /* Адаптивность */
         @media (max-width: 768px) {
             .container {
-                width: 100%;
+                width: 90%;
                 padding: 20px;
             }
             .step-title {
-                font-size: 24px;
+                font-size: 28px;
             }
             .step-description {
                 font-size: 16px;
             }
             #openBrowser {
-                padding: 12px 30px;
+                padding: 15px 40px;
                 font-size: 16px;
             }
         }
@@ -126,11 +123,11 @@
 <body>
     <div class="container">
         <div class="step">
-            <p class="step-title">Step 1:</p>
+            <p class="step-title">Step 1</p>
             <p class="step-description">Click on the colon<br><span class="highlight">Select "Open in browser"</span></p>
         </div>
         <div class="step">
-            <p class="step-title">Step 2:</p>
+            <p class="step-title">Step 2</p>
             <p class="step-description">Click the button below to proceed:</p>
         </div>
         <button id="openBrowser" onclick="window.location.href='https://swipe.vg/p/kiravale'">Let's Go!</button>
