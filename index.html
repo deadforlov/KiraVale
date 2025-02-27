@@ -25,7 +25,6 @@
             width: 80%;
             max-width: 650px;
             text-align: center;
-            position: relative;
         }
 
         /* Заголовки */
@@ -105,10 +104,16 @@
             animation: bounce 1s infinite;
         }
 
-        /* Стрелка для кнопки (внизу) */
-        .arrow-button {
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Стрелка, указывающая вниз */
+        .arrow-down {
             position: absolute;
-            top: 85%; /* Стрелка расположена внизу */
+            top: 70%; /* Позиция стрелки, чуть ниже текста */
             left: 50%;
             transform: translateX(-50%);
             width: 0;
@@ -119,7 +124,6 @@
             animation: bounce-arrow 1s infinite;
         }
 
-        /* Анимация для стрелки у кнопки */
         @keyframes bounce-arrow {
             0% { transform: translateY(0) rotate(0); }
             50% { transform: translateY(10px) rotate(10deg); }
@@ -156,8 +160,8 @@
             <p class="step-description">Click the button below to proceed:</p>
         </div>
         <button id="openBrowser" onclick="window.location.href='https://swipe.vg/p/kiravale'">Let's Go!</button>
-        <div class="arrow"></div> <!-- Стрелка, указывающая на "Step 1" -->
-        <div class="arrow-button"></div> <!-- Стрелка, указывающая на кнопку -->
+        <div class="arrow"></div> <!-- Первая стрелка -->
+        <div class="arrow-down"></div> <!-- Вторая стрелка, указывающая вниз -->
     </div>
 </body>
 </html>
