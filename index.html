@@ -12,45 +12,47 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f7f7f7;
+      font-family: 'Proxima Nova', sans-serif;
+      background: linear-gradient(135deg, #fe2c55, #8e44ad);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      color: white;
       text-align: center;
-      color: #333;
+      overflow: hidden;
     }
 
     .container {
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      width: 350px;
       position: relative;
+      width: 90%;
+      max-width: 350px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .step {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .step-title {
-      font-size: 26px;
-      font-weight: 600;
-      color: #ff2d55;
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
     }
 
     .step-description {
       font-size: 18px;
       font-weight: 500;
-      color: #4f4f4f;
+      color: rgba(255, 255, 255, 0.8);
       margin: 10px 0;
     }
 
     .highlight {
       font-weight: bold;
-      color: #ff2d55;
+      color: #fe2c55;
     }
 
     .arrow {
@@ -62,23 +64,22 @@
     }
 
     .arrow-up {
-      border-bottom: 30px solid #ff2d55;
+      border-bottom: 30px solid #fe2c55;
       top: 10px;
       right: 10px;
     }
 
     .arrow-down {
-      border-top: 30px solid #ff2d55;
+      border-top: 30px solid #fe2c55;
       bottom: 80px;
       left: 50%;
       transform: translateX(-50%);
     }
 
-    /* Анимация кнопки */
     .btn {
       display: inline-block;
       padding: 15px 30px;
-      background-color: #ff2d55;
+      background-color: #fe2c55;
       color: white;
       border: none;
       border-radius: 50px;
@@ -103,7 +104,7 @@
     }
 
     /* Для шрифта */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;600&display=swap');
   </style>
 </head>
 <body>
