@@ -20,18 +20,17 @@
 
         .container {
             padding: 40px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.7); /* Темный фон без рамок */
             border-radius: 15px;
             width: 80%;
             max-width: 700px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
         }
 
         .step {
             margin-bottom: 30px;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.1); /* Фон без рамок */
             border-radius: 10px;
         }
 
@@ -90,14 +89,14 @@
         /* Анимация стрелки, чтобы она указывала на кнопку */
         .arrow {
             position: absolute;
-            top: 60%;
+            top: 10%; /* Стрелка теперь будет в правом верхнем углу */
             right: 10%;
             width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-bottom: 20px solid #fff;
-            animation: bounce 1s infinite;
+            animation: bounce 1s infinite; /* Плавное движение стрелки */
         }
 
         @keyframes bounce {
