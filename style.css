@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 350px;
+}
+
+.step {
+  margin-bottom: 30px;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #d9534f;
+}
+
+.step-description {
+  font-size: 18px;
+  font-weight: 500;
+  color: #343a40;
+  margin: 10px 0;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.arrow-up {
+  border-bottom: 20px solid #d9534f;
+  margin-top: 20px;
+}
+
+.arrow-down {
+  border-top: 20px solid #d9534f;
+  margin-top: 20px;
+}
