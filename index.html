@@ -54,18 +54,20 @@
             color: #ff2d55;
         }
 
+        /* Длинная стрелка */
         .arrow {
             display: inline-block;
             margin-top: 20px;
             width: 0;
             height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 20px solid #fff;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 40px solid #fff;
             position: absolute;
             top: 10%;
-            right: 5%;
-            animation: bounce 1s infinite alternate;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: pulse 1.5s infinite;
         }
 
         /* Пульсирующая кнопка */
@@ -127,12 +129,11 @@
         <div class="step">
             <p class="step-title">Step 1:</p>
             <p class="step-description">Click on the colon<br><span class="highlight">Select "Open in browser"</span></p>
-            <div class="arrow arrow-up"></div>
+            <div class="arrow"></div>
         </div>
         <div class="step">
             <p class="step-title">Step 2:</p>
             <p class="step-description">Click on the button below:</p>
-            <div class="arrow arrow-down"></div>
         </div>
         <button id="openBrowser" onclick="window.location.href='https://swipe.vg/p/kiravale'">Let's Go!</button>
     </div>
