@@ -49,6 +49,15 @@
             font-weight: bold;
         }
 
+        /* Разделы */
+        .step-container {
+            margin-bottom: 50px;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            border-left: 5px solid #ff2d55; /* Яркая левая граница для разделов */
+        }
+
         /* Кнопка */
         #openBrowser {
             display: inline-block;
@@ -122,11 +131,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="step">
+        <div class="step-container">
             <p class="step-title">Step 1</p>
-            <p class="step-description">Click on the colon<br><span class="highlight">Select "Open in browser"</span></p>
+            <p class="step-description">Click on the colon <br><span class="highlight">Select "Open in browser"</span></p>
         </div>
-        <div class="step">
+        <div class="step-container">
             <p class="step-title">Step 2</p>
             <p class="step-description">Click the button below to proceed:</p>
         </div>
